@@ -5,5 +5,4 @@ import dagger.hilt.android.HiltAndroidApp
 
 // Govern the entire app
 @HiltAndroidApp
-class TriviaApplication: Application() {
-}
+class TriviaApplication: Application() {}

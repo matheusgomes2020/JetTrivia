@@ -7,6 +7,5 @@ import javax.inject.Singleton
 @Singleton
 interface QuestionApi {
     @GET("world.json")
-    //Outside to the main thread
     suspend fun getAllQuestions(): Question
 }

@@ -15,21 +15,18 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
-
-
     @Singleton
     @Provides
-    fun provideQuestionRepository( api: QuestionApi ) = QuestionRepository( api )
+    fun provideQuestionRepository(api: QuestionApi) = QuestionRepository(api)
 
     @Singleton
     @Provides
     fun provideQuestionApi(): QuestionApi {
-
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
-            .addConverterFactory( GsonConverterFactory.create() )
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create( QuestionApi::class.java )
+            .create(QuestionApi::class.java)
 
     }
 
